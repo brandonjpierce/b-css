@@ -1,0 +1,97 @@
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+:root {
+  --h1: 2rem;
+  --h2: 1.5rem;
+  --h3: 1.25rem;
+  --h4: 1rem;
+  --h5: .875rem;
+  --h6: .75rem;
+}
+
+/**
+ * FONT SCALE
+ */
+ .h1 { font-size: var(--h1); }
+ .h2 { font-size: var(--h2); }
+ .h3 { font-size: var(--h3); }
+ .h4 { font-size: var(--h4); }
+ .h5 { font-size: var(--h5); }
+ .h6 { font-size: var(--h6); }
+
+/**
+ * FONT STYLES
+ */
+.bold { font-weight: bold; }
+.regular { font-weight: normal; }
+.italic { font-style: italic; }
+.caps { text-transform: uppercase; }
+
+/**
+ * FONT ALIGN
+ */
+@each $position in (left, center, right, justify) {
+  .xs-text-align-$(position) { text-align: $(position); }
+}
+
+@media (--breakpoint-sm) {
+  @each $position in (left, center, right, justify) {
+    .sm-text-align-$(position) { text-align: $(position); }
+  }
+}
+
+@media (--breakpoint-md) {
+  @each $position in (left, center, right, justify) {
+    .md-text-align-$(position) { text-align: $(position); }
+  }
+}
+
+@media (--breakpoint-lg) {
+  @each $position in (left, center, right, justify) {
+    .lg-text-align-$(position) { text-align: $(position); }
+  }
+}
+
+/**
+ * UTILITIES
+ */
+.xs-truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (--breakpoint-sm) {
+  .sm-truncate {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (--breakpoint-md) {
+  .md-truncate {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (--breakpoint-lg) {
+  .lg-truncate {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}

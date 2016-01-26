@@ -1,0 +1,78 @@
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+:root {
+  --border-width: 1;
+  --border-style: solid;
+}
+
+.xs-border {
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+}
+
+.xs-no-border { border: none; }
+
+@each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+  .xs-border-$(selector) {
+    border-$(property)-width: var(--border-width);
+    border-$(property)-style: var(--border-style);
+  }
+
+  .xs-no-border-$(selector) { border-$(property): none; }
+}
+
+@media (--breakpoint-sm) {
+  .sm-border {
+    border-width: var(--border-width);
+    border-style: var(--border-style);
+  }
+
+  .sm-no-border { border: none; }
+
+  @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+    .sm-border-$(selector) {
+      border-$(property)-width: var(--border-width);
+      border-$(property)-style: var(--border-style);
+    }
+
+    .sm-no-border-$(selector) { border-$(property): none; }
+  }
+}
+
+@media (--breakpoint-md) {
+  .md-border {
+    border-width: var(--border-width);
+    border-style: var(--border-style);
+  }
+
+  .md-no-border { border: none; }
+
+  @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+    .md-border-$(selector) {
+      border-$(property)-width: var(--border-width);
+      border-$(property)-style: var(--border-style);
+    }
+
+    .md-no-border-$(selector) { border-$(property): none; }
+  }
+}
+
+@media (--breakpoint-lg) {
+  .lg-border {
+    border-width: var(--border-width);
+    border-style: var(--border-style);
+  }
+
+  .lg-no-border { border: none; }
+
+  @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+    .lg-border-$(selector) {
+      border-$(property)-width: var(--border-width);
+      border-$(property)-style: var(--border-style);
+    }
+
+    .lg-no-border-$(selector) { border-$(property): none; }
+  }
+}

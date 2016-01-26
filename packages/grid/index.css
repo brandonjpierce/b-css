@@ -1,0 +1,56 @@
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+.container,
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container { max-width: 64em; }
+
+/**
+ * ROW
+ */
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  flex-direction: row;
+}
+
+.row-reverse { flex-direction: row-reverse; }
+
+/**
+ * COLUMNS
+ */
+@each $col in (1,2,3,4,5,6,7,8,9,10,11,12) {
+  .xs-col-$(col),
+  .sm-col-$(col),
+  .md-col-$(col),
+  .lg-col-$(col) {
+    box-sizing: border-box;
+  }
+
+  .xs-col-$(col) { width: calc($(col) / 12 * 100%); }
+}
+
+@media (--breakpoint-sm) {
+  @each $col in (1,2,3,4,5,6,7,8,9,10,11,12) {
+    .sm-col-$(col) { width: calc($(col) / 12 * 100%); }
+  }
+}
+
+@media (--breakpoint-md) {
+  @each $col in (1,2,3,4,5,6,7,8,9,10,11,12) {
+    .md-col-$(col) { width: calc($(col) / 12 * 100%); }
+  }
+}
+
+@media (--breakpoint-lg) {
+  @each $col in (1,2,3,4,5,6,7,8,9,10,11,12) {
+    .lg-col-$(col) { width: calc($(col) / 12 * 100%); }
+  }
+}
