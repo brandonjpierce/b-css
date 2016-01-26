@@ -1,0 +1,72 @@
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+:root {
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+  --spacing-3: 2rem;
+  --spacing-4: 4rem;
+}
+
+.xs-p0 { padding: 0; }
+.xs-p1 { padding: var(--spacing-1); }
+.xs-p2 { padding: var(--spacing-2); }
+.xs-p3 { padding: var(--spacing-3); }
+.xs-p4 { padding: var(--spacing-4); }
+
+@each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+  .xs-p$(selector)0 { padding-$(property): 0; }
+  .xs-p$(selector)1 { padding-$(property): var(--spacing-1); }
+  .xs-p$(selector)2 { padding-$(property): var(--spacing-2); }
+  .xs-p$(selector)3 { padding-$(property): var(--spacing-3); }
+  .xs-p$(selector)4 { padding-$(property): var(--spacing-4); }
+}
+
+@media (--breakpoint-sm) {
+  .sm-p0 { padding: 0; }
+  .sm-p1 { padding: var(--spacing-1); }
+  .sm-p2 { padding: var(--spacing-2); }
+  .sm-p3 { padding: var(--spacing-3); }
+  .sm-p4 { padding: var(--spacing-4); }
+
+  @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+    .sm-p$(selector)0 { padding-$(property): 0; }
+    .sm-p$(selector)1 { padding-$(property): var(--spacing-1); }
+    .sm-p$(selector)2 { padding-$(property): var(--spacing-2); }
+    .sm-p$(selector)3 { padding-$(property): var(--spacing-3); }
+    .sm-p$(selector)4 { padding-$(property): var(--spacing-4); }
+  }
+}
+
+@media (--breakpoint-md) {
+  .md-p0 { padding: 0; }
+  .md-p1 { padding: var(--spacing-1); }
+  .md-p2 { padding: var(--spacing-2); }
+  .md-p3 { padding: var(--spacing-3); }
+  .md-p4 { padding: var(--spacing-4); }
+
+  @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+    .md-p$(selector)0 { padding-$(property): 0; }
+    .md-p$(selector)1 { padding-$(property): var(--spacing-1); }
+    .md-p$(selector)2 { padding-$(property): var(--spacing-2); }
+    .md-p$(selector)3 { padding-$(property): var(--spacing-3); }
+    .md-p$(selector)4 { padding-$(property): var(--spacing-4); }
+  }
+}
+
+@media (--breakpoint-lg) {
+  .lg-p0 { padding: 0; }
+  .lg-p1 { padding: var(--spacing-1); }
+  .lg-p2 { padding: var(--spacing-2); }
+  .lg-p3 { padding: var(--spacing-3); }
+  .lg-p4 { padding: var(--spacing-4); }
+
+  @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+    .lg-p$(selector)0 { padding-$(property): 0; }
+    .lg-p$(selector)1 { padding-$(property): var(--spacing-1); }
+    .lg-p$(selector)2 { padding-$(property): var(--spacing-2); }
+    .lg-p$(selector)3 { padding-$(property): var(--spacing-3); }
+    .lg-p$(selector)4 { padding-$(property): var(--spacing-4); }
+  }
+}

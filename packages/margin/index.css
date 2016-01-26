@@ -1,0 +1,72 @@
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+:root {
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+  --spacing-3: 2rem;
+  --spacing-4: 4rem;
+}
+
+.xs-m0 { margin: 0; }
+.xs-m1 { margin: var(--spacing-1); }
+.xs-m2 { margin: var(--spacing-2); }
+.xs-m3 { margin: var(--spacing-3); }
+.xs-m4 { margin: var(--spacing-4); }
+
+@each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+  .xs-m$(selector)0 { margin-$(property): 0; }
+  .xs-m$(selector)1 { margin-$(property): var(--spacing-1); }
+  .xs-m$(selector)2 { margin-$(property): var(--spacing-2); }
+  .xs-m$(selector)3 { margin-$(property): var(--spacing-3); }
+  .xs-m$(selector)4 { margin-$(property): var(--spacing-4); }
+}
+
+@media (--breakpoint-sm) {
+  .sm-m0 { margin: 0; }
+  .sm-m1 { margin: var(--spacing-1); }
+  .sm-m2 { margin: var(--spacing-2); }
+  .sm-m3 { margin: var(--spacing-3); }
+  .sm-m4 { margin: var(--spacing-4); }
+
+  @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+    .sm-m$(selector)0 { margin-$(property): 0; }
+    .sm-m$(selector)1 { margin-$(property): var(--spacing-1); }
+    .sm-m$(selector)2 { margin-$(property): var(--spacing-2); }
+    .sm-m$(selector)3 { margin-$(property): var(--spacing-3); }
+    .sm-m$(selector)4 { margin-$(property): var(--spacing-4); }
+  }
+}
+
+@media (--breakpoint-md) {
+  .md-m0 { margin: 0; }
+  .md-m1 { margin: var(--spacing-1); }
+  .md-m2 { margin: var(--spacing-2); }
+  .md-m3 { margin: var(--spacing-3); }
+  .md-m4 { margin: var(--spacing-4); }
+
+  @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+    .md-m$(selector)0 { margin-$(property): 0; }
+    .md-m$(selector)1 { margin-$(property): var(--spacing-1); }
+    .md-m$(selector)2 { margin-$(property): var(--spacing-2); }
+    .md-m$(selector)3 { margin-$(property): var(--spacing-3); }
+    .md-m$(selector)4 { margin-$(property): var(--spacing-4); }
+  }
+}
+
+@media (--breakpoint-lg) {
+  .lg-m0 { margin: 0; }
+  .lg-m1 { margin: var(--spacing-1); }
+  .lg-m2 { margin: var(--spacing-2); }
+  .lg-m3 { margin: var(--spacing-3); }
+  .lg-m4 { margin: var(--spacing-4); }
+
+  @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
+    .lg-m$(selector)0 { margin-$(property): 0; }
+    .lg-m$(selector)1 { margin-$(property): var(--spacing-1); }
+    .lg-m$(selector)2 { margin-$(property): var(--spacing-2); }
+    .lg-m$(selector)3 { margin-$(property): var(--spacing-3); }
+    .lg-m$(selector)4 { margin-$(property): var(--spacing-4); }
+  }
+}

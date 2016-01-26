@@ -1,0 +1,28 @@
+{
+  "name": "b-css",
+  "version": "1.0.0",
+  "description": "Fully modular and responsive centric css framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "postcss -c postcss.config.js -w",
+    "docs:prepare": "gitbook install",
+    "docs:watch": "npm run docs:prepare && gitbook serve",
+    "docs:build": "npm run docs:prepare && rm -rf _book && gitbook build",
+    "docs:publish": "npm run docs:build && cd _book && git init && git config user.email 'brandon@brandonjpierce.com' && git commit --allow-empty -m 'Update docs' && git checkout -b gh-pages && git add . && git commit -am 'Update docs' && git push git@github.com:brandonjpierce/b-ioc gh-pages --force"
+  },
+  "author": "Brandon Pierce <brandon@brandonjpierce.com> (http://brandonjpierce.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "css-mqpacker": "^4.0.0",
+    "cssnano": "^3.4.0",
+    "cssstats": "^2.1.2",
+    "gitbook-plugin-github": "^2.0.0",
+    "postcss": "^5.0.14",
+    "postcss-cli": "^2.3.3",
+    "postcss-custom-media": "^5.0.0",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-each": "^0.7.1",
+    "postcss-import": "^7.1.3"
+  }
+}
