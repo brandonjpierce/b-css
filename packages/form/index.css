@@ -1,0 +1,53 @@
+/**
+ * b-css-form package
+ */
+
+:root {
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: var(--spacing-1);
+}
+
+.form-helper {
+  display: block;
+  font-weight: normal;
+  font-size: 0.875rem;
+  margin-top: var(--spacing-1);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  height: 2.5rem;
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, .25);
+  border-radius: 0.25rem;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: 0;
+  box-shadow:
+    0 0 0 .25rem rgba(0,0,0,.0875);
+}
+
+.form-radio {
+
+}
+
+.form-checkbox {
+
+}

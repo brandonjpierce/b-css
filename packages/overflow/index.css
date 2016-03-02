@@ -1,0 +1,33 @@
+/**
+ * b-css-overflow package
+ */
+
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+.xs-overflow-hidden { overflow: hidden; }
+.xs-overflow-scroll { overflow: scroll; }
+.xs-overflow-visible { overflow: visible; }
+.xs-overflow-auto { overflow: auto; }
+
+@media (--breakpoint-sm) {
+  .sm-overflow-hidden { overflow: hidden; }
+  .sm-overflow-scroll { overflow: scroll; }
+  .sm-overflow-visible { overflow: visible; }
+  .sm-overflow-auto { overflow: auto; }
+}
+
+@media (--breakpoint-md) {
+  .md-overflow-hidden { overflow: hidden; }
+  .md-overflow-scroll { overflow: scroll; }
+  .md-overflow-visible { overflow: visible; }
+  .md-overflow-auto { overflow: auto; }
+}
+
+@media (--breakpoint-lg) {
+  .lg-overflow-hidden { overflow: hidden; }
+  .lg-overflow-scroll { overflow: scroll; }
+  .lg-overflow-visible { overflow: visible; }
+  .lg-overflow-auto { overflow: auto; }
+}

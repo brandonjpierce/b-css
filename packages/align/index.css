@@ -1,4 +1,8 @@
-.align-baseline { vertical-align: baseline; }
-.align-top { vertical-align: top; }
-.align-middle { vertical-align: middle; }
-.align-bottom { vertical-align: bottom; }
+/**
+ * b-css align package
+ */
+
+.a-baseline { vertical-align: baseline; }
+.a-top { vertical-align: top; }
+.a-middle { vertical-align: middle; }
+.a-bottom { vertical-align: bottom; }

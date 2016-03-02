@@ -1,0 +1,29 @@
+/**
+ * b-css-display package
+ */
+
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+@each $property in (inline, inline-block, block, table, table-cell) {
+  .xs-$(property) { display: $(property); }
+}
+
+@media (--breakpoint-sm) {
+  @each $property in (inline, inline-block, block, table, table-cell) {
+    .sm-$(property) { display: $(property); }
+  }
+}
+
+@media (--breakpoint-md) {
+  @each $property in (inline, inline-block, block, table, table-cell) {
+    .md-$(property) { display: $(property); }
+  }
+}
+
+@media (--breakpoint-lg) {
+  @each $property in (inline, inline-block, block, table, table-cell) {
+    .lg-$(property) { display: $(property); }
+  }
+}

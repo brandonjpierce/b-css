@@ -1,3 +1,7 @@
+/**
+ * b-css grid package
+ */
+
 @custom-media --breakpoint-sm (min-width: 40em);
 @custom-media --breakpoint-md (min-width: 52em);
 @custom-media --breakpoint-lg (min-width: 64em);
@@ -11,7 +15,7 @@
 .container { max-width: 64em; }
 
 /**
- * ROW
+ * Row
  */
 .row {
   box-sizing: border-box;
@@ -24,7 +28,7 @@
 .row-reverse { flex-direction: row-reverse; }
 
 /**
- * COLUMNS
+ * Columns
  */
 @each $col in (1,2,3,4,5,6,7,8,9,10,11,12) {
   .xs-col-$(col),

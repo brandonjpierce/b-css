@@ -1,3 +1,7 @@
+/**
+ * b-css border package
+ */
+
 @custom-media --breakpoint-sm (min-width: 40em);
 @custom-media --breakpoint-md (min-width: 52em);
 @custom-media --breakpoint-lg (min-width: 64em);
@@ -7,72 +11,72 @@
   --border-style: solid;
 }
 
-.xs-border {
+.xs-b {
   border-width: var(--border-width);
   border-style: var(--border-style);
 }
 
-.xs-no-border { border: none; }
+.xs-no-b { border: none; }
 
 @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
-  .xs-border-$(selector) {
+  .xs-b$(selector) {
     border-$(property)-width: var(--border-width);
     border-$(property)-style: var(--border-style);
   }
 
-  .xs-no-border-$(selector) { border-$(property): none; }
+  .xs-no-b$(selector) { border-$(property): none; }
 }
 
 @media (--breakpoint-sm) {
-  .sm-border {
+  .sm-b {
     border-width: var(--border-width);
     border-style: var(--border-style);
   }
 
-  .sm-no-border { border: none; }
+  .sm-no-b { border: none; }
 
   @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
-    .sm-border-$(selector) {
+    .sm-b$(selector) {
       border-$(property)-width: var(--border-width);
       border-$(property)-style: var(--border-style);
     }
 
-    .sm-no-border-$(selector) { border-$(property): none; }
+    .sm-no-b$(selector) { border-$(property): none; }
   }
 }
 
 @media (--breakpoint-md) {
-  .md-border {
+  .md-b {
     border-width: var(--border-width);
     border-style: var(--border-style);
   }
 
-  .md-no-border { border: none; }
+  .md-no-b { border: none; }
 
   @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
-    .md-border-$(selector) {
+    .md-b$(selector) {
       border-$(property)-width: var(--border-width);
       border-$(property)-style: var(--border-style);
     }
 
-    .md-no-border-$(selector) { border-$(property): none; }
+    .md-no-b$(selector) { border-$(property): none; }
   }
 }
 
 @media (--breakpoint-lg) {
-  .lg-border {
+  .lg-b {
     border-width: var(--border-width);
     border-style: var(--border-style);
   }
 
-  .lg-no-border { border: none; }
+  .lg-no-b { border: none; }
 
   @each $selector, $property in (t,r,l,b), (top, right, left, bottom) {
-    .lg-border-$(selector) {
+    .lg-b$(selector) {
       border-$(property)-width: var(--border-width);
       border-$(property)-style: var(--border-style);
     }
 
-    .lg-no-border-$(selector) { border-$(property): none; }
+    .lg-no-b$(selector) { border-$(property): none; }
   }
 }

@@ -1,0 +1,29 @@
+/**
+ * b-css-float package
+ */
+
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+@each $direction in (l, r, n) {
+  .xs-f$(direction) { float: $(direction); }
+}
+
+@media (--breakpoint-sm) {
+  @each $direction in (l, r, n) {
+    .sm-f$(direction) { float: $(direction); }
+  }
+}
+
+@media (--breakpoint-md) {
+  @each $direction in (l, r, n) {
+    .md-f$(direction) { float: $(direction); }
+  }
+}
+
+@media (--breakpoint-lg) {
+  @each $direction in (l, r, n) {
+    .lg-f$(direction) { float: $(direction); }
+  }
+}

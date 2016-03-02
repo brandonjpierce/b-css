@@ -1,9 +1,13 @@
+/**
+ * b-css flex package
+ */
+
 @custom-media --breakpoint-sm (min-width: 40em);
 @custom-media --breakpoint-md (min-width: 52em);
 @custom-media --breakpoint-lg (min-width: 64em);
 
 /**
- * FLEX
+ * Flex
  */
 .xs-flex { display: flex; }
 
@@ -20,7 +24,7 @@
 }
 
 /**
- * FLEX GROWTH
+ * Flex growth
  */
 .flex-none { flex: none; }
 
@@ -37,13 +41,13 @@
 }
 
 /**
- * FLEX DIRECTION
+ * Flex direction
  */
 .flex-column  { flex-direction: column; }
 .flex-wrap    { flex-wrap: wrap; }
 
 /**
- * FLEX ITEM ALIGN
+ * Flex item align
  */
 .flex-align-items-start { align-items: flex-start; }
 .flex-align-items-end { align-items: flex-end; }
@@ -52,7 +56,7 @@
 .flex-align-items-stretch { align-items: stretch; }
 
 /**
- * FLEX SELF ALIGN
+ * Flex self align
  */
 .flex-align-self-start { align-self: flex-start; }
 .flex-align-self-end { align-self: flex-end; }
@@ -61,7 +65,7 @@
 .flex-align-self-stretch { align-self: stretch; }
 
 /**
- * FLEX CONTENT ALIGN
+ * Flex content align
  */
 .flex-align-content-start { align-content: flex-start; }
 .flex-align-content-end { align-content: flex-end; }
@@ -71,7 +75,7 @@
 .flex-align-content-stretch { align-content: stretch; }
 
 /**
- * FLEX JUSTIFY
+ * Flex justify
  */
 .flex-justify-start { justify-content: flex-start; }
 .flex-justify-end { justify-content: flex-end; }

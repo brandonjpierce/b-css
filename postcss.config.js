@@ -5,9 +5,10 @@ module.exports = {
     'postcss-custom-media',
     'postcss-each',
     'css-mqpacker',
+    'autoprefixer',
     'cssnano'
   ],
   'input': 'src/b-css.css',
-  'dir': './dist',
+  'dir': 'dist',
   'local-plugins': true,
 };
